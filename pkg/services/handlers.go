@@ -138,10 +138,9 @@ func Refresh(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	http.SetCookie(w,
-		&http.Cookie{
-			Name:    "refresh_token",
-			Value:   tokenString,
-			Expires: expirationTime,
-		})
+	http.SetCookie(w, &http.Cookie{
+		Name:    "refresh_token",
+		Value:   tokenString,
+		Expires: expirationTime,
+	})
 }
